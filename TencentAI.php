@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 //error_reporting(0);
  /**
  *	腾讯AI PHP, 十个功能完整调用例子
@@ -16,21 +16,21 @@
 header("Content-Type: application/json; charset=utf-8");
 if(is_array($_REQUEST)&&count($_REQUEST)>0){ //先判断是否传值了
 if(isset($_REQUEST["wd"])){//是否存在"wd"的参数
-$word=$_REQUEST["wd"];//存在
+$word=$_REQUEST["wd"];
 }else{
- echo "非法调用！";//没有输入需要搜索的内容
+ echo "非法调用！";
  exit();}
 if(isset($_REQUEST["type"])){//是否存在"type"的参数
-$type=$_REQUEST["type"];//存在
+$type=$_REQUEST["type"];
 }else{
 $type='1';}//如果没有输入type那么就是1，输入的话就不管咯！
 }
-if(isset($_REQUEST["id"])){//是否存在"机器人QQ"的参数
-$id=$_REQUEST["id"];//存在
+if(isset($_REQUEST["id"])){//是否存在"id"的参数
+$id=$_REQUEST["id"];
 }else{
-$id=10000;//没有输入需要搜索的内容
+$id=10000;
 }
-if($word==''){//如果没内容
+if($word==''){
 echo '我需要一个目标';
 exit();
 }
